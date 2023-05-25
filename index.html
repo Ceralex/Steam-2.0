@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/css/glide.core.min.css">
+	<title>Steam 2.0</title>
+</head>
+
+<body class="bg-[#1b2837]">
+	<nav class="flex items-center justify-between m-8 text-white">
+		<a href="./index.html" class="text-2xl font-bold">STEAM 2.0</a>
+		<button class="flex items-center bg-[#214b6b] px-5 py-2 rounded-full space-x-3"><svg
+				xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+				role="img" class="w-5 h-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+				<g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+					<path d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0Zm-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z"></path>
+					<path
+						d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1ZM3 12c0 2.09.713 4.014 1.908 5.542A8.986 8.986 0 0 1 12.065 14a8.984 8.984 0 0 1 7.092 3.458A9 9 0 1 0 3 12Zm9 9a8.963 8.963 0 0 1-5.672-2.012A6.992 6.992 0 0 1 12.065 16a6.991 6.991 0 0 1 5.689 2.92A8.964 8.964 0 0 1 12 21Z">
+					</path>
+				</g>
+			</svg>
+			<p class="font-bold">Profilo</p>
+		</button>
+	</nav>
+	<main>
+		<section>
+			<div class="px-5 glide md:px-0">
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides">
+						<li class="glide__slide">
+							<img onclick="href('./games/eldenring.html')"
+								class="w-full sm:h-80 xl:h-96 2xl:h-[30rem] object-cover rounded-3xl"
+								src="https://d1lss44hh2trtw.cloudfront.net/assets/article/2021/06/10/elden-ring-everything-you-need-to-know_feature.jpg"
+								alt="eldenring.jpg">
+						</li>
+						<li class="glide__slide">
+							<img onclick="href('./games/fortnite.html')"
+								class="w-full sm:h-80 xl:h-96 2xl:h-[30rem] object-cover rounded-3xl"
+								src="https://www.rtlnieuws.nl/sites/default/files/styles/liggend_hoge_resolutie/public/content/images/2020/06/17/Fortnite-Season3-Battle-Pass-Skins.jpg?itok=J2TF9d4d"
+								alt="fortnite.jpg">
+						</li>
+						<li class="glide__slide">
+							<img onclick="href('./games/rocketleague.html')"
+								class="w-full sm:h-80 xl:h-96 2xl:h-[30rem] object-cover rounded-3xl"
+								src="https://cdn1.dotesports.com/wp-content/uploads/2019/12/03134524/rocketleague-rocketpass5-psyonix.jpg"
+								alt="rocketleague.jpg">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="flex items-center my-6 space-x-3">
+				<div class="w-10 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+				<h1 class="text-xl font-bold text-white whitespace-nowrap">Nuovi e di tendenza</h1>
+				<div class="w-full md:w-20 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+			</div>
+			<div class="justify-between md:flex mx-9">
+				<input class="w-full mb-5 md:mb-0 md:w-auto text-white outline-none bg-[#1b3b54] rounded-3xl px-3 py-1"
+					type="search" placeholder="Cerca" id="search" oninput="filterByName()">
+
+				<div class="flex items-center">
+					<p class="mr-3 font-bold text-white whitespace-nowrap">Ordina per: </p>
+					<select id="sortBy"
+						class="w-3/4 text-white font-semibold outline-none bg-[#1b3b54] rounded-3xl px-3 py-1"
+						onchange="update()">
+						<option value="price">Prezzo</option>
+						<option value="name" selected>Nome</option>
+					</select>
+				</div>
+			</div>
+			<div id="games" class="p-8 space-y-8">
+				<!-- Gioco 1 -->
+				<div class="bg-[#17202d] rounded-2xl md:flex game hover:cursor-pointer"
+					onclick="href('./games/rocketleague.html')">
+					<img class="w-full md:w-1/2 h-[18rem] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none"
+						src="https://cdn1.dotesports.com/wp-content/uploads/2019/12/03134524/rocketleague-rocketpass5-psyonix.jpg"
+						alt="">
+					<div class="w-full p-5 md:p-10">
+						<div class="justify-between w-full md:flex h-1/2">
+							<div>
+								<h1 class="text-xl font-semibold text-white md:text-4xl game-name">Rocket League</h1>
+								<p class="text-gray-500 text-md md:text-lg">Sports Racing, Multiplayer, Competitive,
+									FREE</p>
+								<div class="w-32 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+							</div>
+							<div class="flex justify-between md:space-y-24 md:flex-col">
+								<div class="flex space-x-4">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class="fill-current text-[#1b3b54] w-10 mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+										<path fill="currentColor"
+											d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801">
+										</path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class=" fill-current text-[#1b3b54] w-10  mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15">
+										<path fill="none" stroke="currentColor"
+											d="M2.5 9.662c0-.758.224-1.498.645-2.129l.565-.847a7.203 7.203 0 0 0 1.07-2.583l.328-1.642a2.44 2.44 0 0 1 4.784 0l.329 1.642a7.18 7.18 0 0 0 1.07 2.583l.564.847c.42.63.645 1.371.645 2.129m-7.392 3.637c.386.13.8.201 1.23.201h2.324c.43 0 .844-.07 1.23-.201M6.5 5.5L4.947 8.606a2 2 0 0 0 1.79 2.894h1.527a2 2 0 0 0 1.789-2.894L8.5 5.5M6.5 3v1.5m2-1.5v1.5m-1.894-.053L5.5 5l.586.586a2 2 0 0 0 2.828 0L9.5 5l-1.106-.553a2 2 0 0 0-1.788 0ZM.77 11.325l.479-1.196a1 1 0 0 1 .928-.629h1.164a1 1 0 0 1 .919.606l.93 2.172a1 1 0 0 1-.319 1.194l-.738.553a1 1 0 0 1-1.24-.031l-1.835-1.529a1 1 0 0 1-.288-1.14Zm13.46 0l-.479-1.196a1 1 0 0 0-.928-.629h-1.164a1 1 0 0 0-.919.606l-.93 2.172a1 1 0 0 0 .319 1.194l.738.553a1 1 0 0 0 1.24-.031l1.835-1.529a1 1 0 0 0 .288-1.14Z">
+										</path>
+									</svg>
+								</div>
+								<h1 class="pt-5 text-4xl font-bold text-right text-white game-price">00.00</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gioco 2 -->
+				<div class="bg-[#17202d] rounded-2xl md:flex game hover:cursor-pointer"
+					onclick="href('./games/eldenring.html')">
+					<img class="w-full md:w-1/2 h-[18rem] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none"
+						src="https://d1lss44hh2trtw.cloudfront.net/assets/article/2021/06/10/elden-ring-everything-you-need-to-know_feature.jpg"
+						alt="">
+					<div class="w-full p-5 md:p-10">
+						<div class="justify-between w-full md:flex h-1/2">
+							<div>
+								<h1 class="text-xl font-semibold text-white md:text-4xl game-name">Elden Ring</h1>
+								<p class="text-gray-500 text-md md:text-lg">Souls like, Relax, Dark Fantasy, RPG</p>
+								<div class="w-32 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+							</div>
+							<div class="flex justify-between md:space-y-24 md:flex-col">
+								<div class="flex space-x-4">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class="fill-current text-[#1b3b54] w-10 mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+										<path fill="currentColor"
+											d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801">
+										</path>
+									</svg>
+								</div>
+								<h1 class="pt-5 text-4xl font-bold text-right text-white game-price">59.99</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gioco 3 -->
+				<div class="bg-[#17202d] rounded-2xl md:flex game hover:cursor-pointer"
+					onclick="href('./games/fortnite.html')">
+					<img class="w-full md:w-1/2 h-[18rem] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none"
+						src="https://www.rtlnieuws.nl/sites/default/files/styles/liggend_hoge_resolutie/public/content/images/2020/06/17/Fortnite-Season3-Battle-Pass-Skins.jpg?itok=J2TF9d4d"
+						alt="">
+					<div class="w-full p-5 md:p-10">
+						<div class="justify-between w-full md:flex h-1/2">
+							<div>
+								<h1 class="text-xl font-semibold text-white md:text-4xl game-name">Fortnite</h1>
+								<p class="text-gray-500 text-md md:text-lg">Battle Royale, Shooter, FREE</p>
+								<div class="w-32 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+							</div>
+							<div class="flex justify-between md:space-y-24 md:flex-col">
+								<div class="flex space-x-4">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class="fill-current text-[#1b3b54] w-10 mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+										<path fill="currentColor"
+											d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801">
+										</path>
+									</svg>
+								</div>
+								<h1 class="pt-5 text-4xl font-bold text-right text-white game-price">00.00</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gioco 4 -->
+				<div class="bg-[#17202d] rounded-2xl md:flex game hover:cursor-pointer">
+					<img class="w-full md:w-1/2 h-[18rem] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none"
+						src="https://media-assets.wired.it/photos/625e6f3d66ec06fddf4f1403/16:9/w_2560%2Cc_limit/apps.2678.14513124030084310.ec67955a-94fe-46fe-943b-1c6afb546be2.jpg"
+						alt="">
+					<div class="w-full p-5 md:p-10">
+						<div class="justify-between w-full md:flex h-1/2">
+							<div>
+								<h1 class="text-xl font-semibold text-white md:text-4xl game-name">Minecraft</h1>
+								<p class="text-gray-500 text-md md:text-lg">Sandbox, Singleplayer</p>
+								<div class="w-32 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+							</div>
+							<div class="flex justify-between md:space-y-24 md:flex-col">
+								<div class="flex space-x-4">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class="fill-current text-[#1b3b54] w-10 mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+										<path fill="currentColor"
+											d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801">
+										</path>
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class=" fill-current text-[#1b3b54] w-10  mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15">
+										<path fill="none" stroke="currentColor"
+											d="M2.5 9.662c0-.758.224-1.498.645-2.129l.565-.847a7.203 7.203 0 0 0 1.07-2.583l.328-1.642a2.44 2.44 0 0 1 4.784 0l.329 1.642a7.18 7.18 0 0 0 1.07 2.583l.564.847c.42.63.645 1.371.645 2.129m-7.392 3.637c.386.13.8.201 1.23.201h2.324c.43 0 .844-.07 1.23-.201M6.5 5.5L4.947 8.606a2 2 0 0 0 1.79 2.894h1.527a2 2 0 0 0 1.789-2.894L8.5 5.5M6.5 3v1.5m2-1.5v1.5m-1.894-.053L5.5 5l.586.586a2 2 0 0 0 2.828 0L9.5 5l-1.106-.553a2 2 0 0 0-1.788 0ZM.77 11.325l.479-1.196a1 1 0 0 1 .928-.629h1.164a1 1 0 0 1 .919.606l.93 2.172a1 1 0 0 1-.319 1.194l-.738.553a1 1 0 0 1-1.24-.031l-1.835-1.529a1 1 0 0 1-.288-1.14Zm13.46 0l-.479-1.196a1 1 0 0 0-.928-.629h-1.164a1 1 0 0 0-.919.606l-.93 2.172a1 1 0 0 0 .319 1.194l.738.553a1 1 0 0 0 1.24-.031l1.835-1.529a1 1 0 0 0 .288-1.14Z">
+										</path>
+									</svg>
+								</div>
+								<h1 class="pt-5 text-4xl font-bold text-right text-white game-price">20.00</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gioco 5 -->
+				<div class="bg-[#17202d] rounded-2xl md:flex game hover:cursor-pointer">
+					<img class="w-full md:w-1/2 h-[18rem] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none"
+						src="https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_2560x1440_Landscaped%20Store-2560x1440-79155f950f32c9790073feaccae570fb.jpg"
+						alt="">
+					<div class="w-full p-5 md:p-10">
+						<div class="justify-between w-full md:flex h-1/2">
+							<div>
+								<h1 class="text-xl font-semibold text-white md:text-4xl game-name">GTA V</h1>
+								<p class="text-gray-500 text-md md:text-lg">Open world, Multiplayer, Action</p>
+								<div class="w-32 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+							</div>
+							<div class="flex justify-between md:space-y-24 md:flex-col">
+								<div class="flex space-x-4">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class="fill-current text-[#1b3b54] w-10 mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+										<path fill="currentColor"
+											d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801">
+										</path>
+									</svg>
+								</div>
+								<h1 class="pt-5 text-4xl font-bold text-right text-white game-price">35.00</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Gioco 6 -->
+				<div class="bg-[#17202d] rounded-2xl md:flex game hover:cursor-pointer">
+					<img class="w-full md:w-1/2 h-[18rem] object-cover md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none"
+						src="https://sm.ign.com/ign_it/screenshot/default/xxx_gj3r.jpg" alt="">
+					<div class="w-full p-5 md:p-10">
+						<div class="justify-between w-full md:flex h-1/2">
+							<div>
+								<h1 class="text-xl font-semibold text-white md:text-4xl game-name">Apex Legends</h1>
+								<p class="text-gray-500 text-md md:text-lg">Battle Royale, Shooter, FREE</p>
+								<div class="w-32 h-2 mt-1 bg-[#1b3b54] rounded-lg"></div>
+							</div>
+							<div class="flex justify-between md:space-y-24 md:flex-col">
+								<div class="flex space-x-4">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										aria-hidden="true" role="img"
+										class="fill-current text-[#1b3b54] w-10 mt-5 md:mt-0"
+										preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+										<path fill="currentColor"
+											d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801">
+										</path>
+									</svg>
+								</div>
+								<h1 class="pt-5 text-4xl font-bold text-right text-white game-price">00.00</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="text-center ">
+		<div class="p-4 font-semibold text-center text-white bg-[#17202d]">
+			&copy; 2022 Alessandro Ceresa
+		</div>
+	</footer>
+</body>
+<script>
+	const config = {
+		type: "carousel",
+		perView: 1,
+		gap: 100,
+		peek: 500,
+		autoplay: 5000,
+		animationDuration: 1000,
+		hoverpause: true,
+		focusAt: "center",
+		breakpoints: {
+			1650: {
+				peek: 350,
+			},
+			1100: {
+				peek: 200,
+			},
+			800: {
+				peek: 0,
+			},
+		}
+	}
+
+	new Glide('.glide', config).mount()
+
+	// Funzione href per mettere gli href alle div
+	const href = (url) => {
+		window.location.href = url;
+	}
+
+</script>
+<script src="app.js"></script>
+
+</html>
